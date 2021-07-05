@@ -15,7 +15,7 @@ def find_license(context):
         start_pos = one.start() + text.find(license)
         end_pos = start_pos + len(license)
         
-        license_list.append(start_pos, end_pos)
+        license_list.append({'start':start_pos, 'end':end_pos})
     
     return license_list
 
