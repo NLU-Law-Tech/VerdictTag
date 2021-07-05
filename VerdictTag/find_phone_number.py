@@ -5,7 +5,7 @@ def find_phone_number(context):
     # 用正則找到判決書中的手機號碼並回傳位置
     # context: string 整篇或部分判決書
 
-    regex = r"[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{10})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}|[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{2}-[0-9]{8})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}|[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{4}-[0-9]{6})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}|[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{4}-[0-9]{3}-[0-9]{3})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}"
+    regex = r"[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{10})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}|[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{4}-[0-9]{6})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}|[^編帳]{1}[^ 第0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A：、警戶鑑-]{1}[ ]{0,2}([0-9]{4}-[0-9]{3}-[0-9]{3})[^0-9\uFF10-\uFF19a-z\uFF41-\uFF5AA-Z\uFF21-\uFF3A帳戶]{1}"
 
     match_text = re.finditer(regex, context)
     phone_number_list = []
