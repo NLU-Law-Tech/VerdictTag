@@ -1,7 +1,7 @@
 import re
 
 
-def find_phone_number(context):
+def find_phone(context):
     # 用正則找到判決書中的手機號碼並回傳位置
     # context: string 整篇或部分判決書
 
