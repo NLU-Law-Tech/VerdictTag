@@ -11,11 +11,11 @@ def find_phone(context):
     phone_number_list = []
 
     for one in match_text:
-        phone_number = one.groups()[0]
         text = one.group()
+        phone_number = one.groups()[0]
         start_pos = one.start() + text.find(phone_number)
         end_pos = start_pos + len(phone_number)
 
-        phone_number_list.append({'start': start_pos, 'end': end_pos})
+        phone_number_list.append({'start': start_pos, 'end': end_pos, 'value': phone_number})
 
     return phone_number_list
