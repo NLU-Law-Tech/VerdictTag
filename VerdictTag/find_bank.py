@@ -19,11 +19,12 @@ def find_bank(context):
         end=one.span()[1]
         value=context[start:end]
         
-        bank_list.append({'start':start, 'end':end})
+        bank_list.append({'start':start, 'end':end, 'value':value})
     for i in match2:
         new=True
         start=i.span()[0]
         end=i.span()[1]
+        value=context[start:end]
         for j in bank_list:
              if j['start']==start or j['end']==end:
                     new=False
