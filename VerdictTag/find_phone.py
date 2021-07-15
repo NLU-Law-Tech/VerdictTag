@@ -12,7 +12,10 @@ def find_phone(context):
 
     for one in match_text:
         text = one.group()
-        phone_number = one.groups()[0]
+        # groups() 回傳 regex 內所有的 group 其 match value
+        non_none_list = [i for i in one.groups() if i != None]
+        # 提取出唯一 match 的 group
+        phone_number = non_none_list[0]
         start_pos = one.start() + text.find(phone_number)
         end_pos = start_pos + len(phone_number)
 
