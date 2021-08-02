@@ -17,6 +17,6 @@ def find_bank(context):
         end=one.span()[1]
         value=context[start:end]
         
-        bank_list.append({'start':start, 'end':end, 'value':value})
+        bank_list.append({'start':start, 'end':end, 'value':value, 'type': 'bank'})
     
     return bank_list
