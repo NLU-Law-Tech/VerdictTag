@@ -19,6 +19,6 @@ def find_phone(context):
         start_pos = one.start() + text.find(phone_number)
         end_pos = start_pos + len(phone_number)
 
-        phone_number_list.append({'start': start_pos, 'end': end_pos, 'value': phone_number})
+        phone_number_list.append({'start': start_pos, 'end': end_pos, 'value': phone_number, 'type': 'phone'})
 
     return phone_number_list
