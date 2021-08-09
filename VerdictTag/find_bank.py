@@ -33,6 +33,6 @@ def find_bank(context):
         end=start+account_end-account_start
             
         
-        bank_list.append({'start':start, 'end':end, 'value':bank_account})
+        bank_list.append({'start':start, 'end':end, 'value':bank_account,'type':'bank'})
     
     return bank_list
