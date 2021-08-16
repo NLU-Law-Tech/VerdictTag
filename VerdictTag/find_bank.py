@@ -1,5 +1,5 @@
 import re
-
+#一開始就會先用正則找包含帳戶跟銀行的一段話 找銀行就只要再從那段話中抓出來名稱就好 
 def find_bank(context):
     # 用正則找到判決書中的車牌並回傳位置
     # context: string 整篇或部分判決書
