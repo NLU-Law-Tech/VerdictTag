@@ -15,7 +15,7 @@ def find_bank(context):
     bank_list = []
     
     for one in match:
-        print(one)
+#         print(one)
         bank_name=''
         start=one.span()[0]
         orgin_start=start
@@ -51,9 +51,9 @@ def find_bank(context):
             branch=bank_accounts[0]
             
             
-        print(bank_name)
-        if branch !='':
-            print("局號:",branch)
+#         print(bank_name)
+#         if branch !='':
+#             print("局號:",branch)
         
         bank_list.append({'start':start, 'end':end, 'value':bank_account,'type':'bank'})
     
