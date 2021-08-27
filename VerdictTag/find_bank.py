@@ -3,7 +3,7 @@ import re
 def find_bank(context):
     # 用正則找到判決書中的車牌並回傳位置
     # context: string 整篇或部分判決書
-    f = open('banklist.txt', 'r',encoding='utf-8')
+    f = open('VerdictTag/banklist.txt', 'r',encoding='utf-8')
     bank_rgs = r"("
     for line in f.readlines():
         bank_rgs += line.replace('\n','') + '|'

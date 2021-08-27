@@ -4,7 +4,7 @@ def find_license(context):
     # 用正則找到判決書中的車牌並回傳位置
     # context: string 整篇或部分判決書
 
-    with open('vehicleType.txt', 'r',encoding='utf-8') as f:
+    with open('VerdictTag/vehicleType.txt', 'r',encoding='utf-8') as f:
         car_rgs = r"("  
         for line in f.readlines():
             car_rgs += line.replace('\n','') + '|'
