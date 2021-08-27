@@ -1,10 +1,11 @@
 import re
+import pkg_resources
 
 def find_license(context):
     # 用正則找到判決書中的車牌並回傳位置
     # context: string 整篇或部分判決書
-
-    with open('VerdictTag/vehicleType.txt', 'r',encoding='utf-8') as f:
+    resource_filename = pkg_resources.resource_filename(__name__, 'assets/vehicleType.txt') # 尋找package底下的檔案路徑
+    with open(resource_filename, 'r',encoding='utf-8') as f:
         car_rgs = r"("  
         for line in f.readlines():
             car_rgs += line.replace('\n','') + '|'
