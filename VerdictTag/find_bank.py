@@ -1,9 +1,11 @@
 import re
+import pkg_resources
 
 def find_bank(context):
     # 用正則找到判決書中的車牌並回傳位置
     # context: string 整篇或部分判決書
-    f = open('banklist.txt', 'r',encoding='utf-8')
+    resource_filename = pkg_resources.resource_filename(__name__, 'assets/banklist.txt') # 尋找package底下的檔案路徑
+    f = open(resource_filename, 'r',encoding='utf-8')
     bank_rgs = r"("
     for line in f.readlines():
         bank_rgs += line.replace('\n','') + '|'
@@ -16,7 +18,7 @@ def find_bank(context):
     bank_list = []
     
     for one in match:
-        print(one)
+#         print(one)
         bank_name=''
         start=one.span()[0]
         orgin_start=start
