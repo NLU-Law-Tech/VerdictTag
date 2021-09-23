@@ -1,7 +1,7 @@
 # VerdictTag
 tag the license, phone number and bank account in the verdict
 ## 安裝
-pip install -U git+https://github.com/NLU-Law-Tech/VerdictTag.git
+```pip install -U git+https://github.com/NLU-Law-Tech/VerdictTag.git```
 ## 使用
 - `input`: 
     - verdict: 判決書 ( string )
